@@ -42,6 +42,7 @@ return {
         preset = "default",
         ["<S-Tab>"] = {},
         ["<Tab>"] = {},
+        ["<C-q>"] = { "select_and_accept" },
         ["<C-l>"] = { "snippet_forward", "fallback" },
         ["<C-j>"] = { "snippet_backward", "fallback" },
       },

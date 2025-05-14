@@ -9,3 +9,12 @@ vim.api.nvim_create_autocmd("FileType", {
     vim.cmd("setlocal nofoldenable")
   end,
 })
+
+-- lua/core/autocmds.lua
+vim.api.nvim_create_autocmd("BufWritePre", {
+  pattern = "*.md",
+  callback = function()
+    vim.cmd([[silent! %!prettier --parser markdown]])
+  end,
+})
+
